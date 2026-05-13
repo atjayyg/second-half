@@ -9,13 +9,82 @@
 <body>
 
   <!-- Intro screen -->
-  <section id="intro">
+  <section id="intro" class="screen active">
     <p class="eyebrow">for you</p>
     <h1 class="title">Second Half</h1>
     <p class="sub">a little something i made</p>
     <button id="begin-btn">begin</button>
+    <div class="nav-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- Chapter 1 — Photos -->
+  <section id="ch1" class="screen">
+    <p class="eyebrow">Chapter one</p>
+    <h2 class="title">Pics of you I love</h2>
+    <div class="photo-grid">
+      <!-- photos go here later -->
+    </div>
+    <div class="chapter-nav">
+      <button class="next-btn" data-next="ch2">Ch. 2 →</button>
+    </div>
+  </section>
+
+  <!-- Chapter 2 — Music break -->
+  <section id="ch2" class="screen">
+    <p class="eyebrow">Chapter two</p>
+    <h2 class="title">Music break</h2>
+    <div class="music-player">
+      <!-- player goes here later -->
+    </div>
+    <div class="chapter-nav">
+      <button class="prev-btn" data-prev="ch1">← Ch. 1</button>
+      <button class="next-btn" data-next="ch3">Ch. 3 →</button>
+    </div>
+  </section>
+
+  <!-- Chapter 3 — What I learnt -->
+  <section id="ch3" class="screen">
+    <p class="eyebrow">Chapter three</p>
+    <h2 class="title">What I learnt from you</h2>
+    <div class="reflections">
+      <!-- written content goes here later -->
+    </div>
+    <div class="chapter-nav">
+      <button class="prev-btn" data-prev="ch2">← Ch. 2</button>
+      <button class="next-btn" data-next="ch4">Ch. 4 →</button>
+    </div>
+  </section>
+
+  <!-- Chapter 4 — Music break 2 -->
+  <section id="ch4" class="screen">
+    <p class="eyebrow">Chapter four</p>
+    <h2 class="title">Music break</h2>
+    <div class="music-player">
+      <!-- player goes here later -->
+    </div>
+    <div class="chapter-nav">
+      <button class="prev-btn" data-prev="ch3">← Ch. 3</button>
+      <button class="next-btn" data-next="ch5">Ch. 5 →</button>
+    </div>
+  </section>
+
+  <!-- Chapter 5 — Letter -->
+  <section id="ch5" class="screen">
+    <p class="eyebrow">Chapter five</p>
+    <h2 class="title">A letter to you</h2>
+    <div class="letter">
+      <!-- letter goes here later -->
+    </div>
+    <div class="chapter-nav">
+      <button class="prev-btn" data-prev="ch4">← Ch. 4</button>
+    </div>
   </section>
 
   <script src="script.js"></script>
-</body>
-</html>
+</body></html>
