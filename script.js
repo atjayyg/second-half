@@ -14,3 +14,9 @@ for (let i = 0; i <words.length; i++){
     title.appendChild(span);
     title.appendChild(document.createTextNode(" "));
 }
+
+const beginBtn = document.getElementById("begin-btn")
+beginBtn.addEventListener("click", function(){
+    document.getElementById("intro").classList.remove("active")
+    document.getElementById("ch1").classList.add("active")
+})
