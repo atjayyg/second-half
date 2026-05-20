@@ -45,7 +45,7 @@
                 <p class="caption">Some caption goes here</p>
             </div>
             <div class="myBox" id="boxS3">
-                <h3 class="lavinia">Lavinia</h3>
+                <p class="lavinia">Lavinia</pp>
             </div>
             <div id="boxF" class="photo-card">
                 <img src="assets\photos\img0.jpg" alt="">
@@ -73,7 +73,6 @@
         const lightbox = document.querySelector(".lightbox");
         const lightboxImg = document.querySelector(".lightbox-img");
         const lightboxCaption = document.querySelector(".lightbox-caption");
-        const lightboxText = document.querySelector(".lightbox-text");
         const photocards = document.querySelectorAll(".photo-card");
         const myBox = document.querySelectorAll(".myBox")
 
@@ -95,7 +94,19 @@
             box.addEventListener("click", function(){
                 const clickedText = box.querySelector("p")
                 if (clickedText.classList.contains("date")){
-                    lightboxText.innerHTML = "This is the date or somehting"
+                    lightboxCaption.className =""
+                    lightboxCaption.innerHTML = "This is the date or somehting"
+                    lightbox.classList.add("active")
+                }
+                if (clickedText.classList.contains("quote")){
+                    lightboxCaption.className =""
+                    lightboxCaption.innerHTML = "This is a quote or something"
+                    lightbox.classList.add("active")
+                }
+                if (clickedText.classList.contains("lavinia")){
+                    lightboxCaption.className =""
+                    lightboxCaption.innerHTML = "This is her name or something"
+                    lightbox.classList.add("active")
                 }
             })
         })
