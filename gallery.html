@@ -73,7 +73,9 @@
         const lightbox = document.querySelector(".lightbox");
         const lightboxImg = document.querySelector(".lightbox-img");
         const lightboxCaption = document.querySelector(".lightbox-caption");
+        const lightboxText = document.querySelector(".lightbox-text");
         const photocards = document.querySelectorAll(".photo-card");
+        const myBox = document.querySelectorAll(".myBox")
 
         photocards.forEach(card => {
             card.addEventListener("click", function () {
@@ -87,6 +89,15 @@
 
         lightbox.addEventListener("click", function () {
             lightbox.classList.remove("active")
+        })
+
+        myBox.forEach(box => {
+            box.addEventListener("click", function(){
+                const clickedText = box.querySelector("p")
+                if (clickedText.classList.contains("date")){
+                    lightboxText.innerHTML = "This is the date or somehting"
+                }
+            })
         })
     </script>
 
