@@ -20,3 +20,4 @@ beginBtn.addEventListener("click", function(){
     document.getElementById("intro").classList.remove("active")
     document.getElementById("ch1").classList.add("active")
 })
+
