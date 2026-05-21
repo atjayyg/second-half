@@ -13,7 +13,7 @@
     <p class="eyebrow">Second Half</p>
     <h1 class="title">Happy Birthday Lavinia!</h1>
     <p class="sub">a little something i made as a gift for you</p>
-    <button id="begin-btn">begin</button>
+    <button id="begin-btn" class="button">begin</button>
     <div class="nav-dots">
       <span class="dot active"></span>
       <span class="dot"></span>
@@ -27,23 +27,9 @@
   <section id="ch1" class="screen">
     <p class="eyebrow">Chapter one</p>
     <h2 class="title">Pics of you I love</h2>
-    <div class="photo-grid">
-      <!-- photos go here later -->
-       <div class="photo-card">
-        <img src="assets/photos/photo1.jpg" alt="">
-        <p class="caption">Some caption goes here</p>
-       </div>
-       <div class="photo-card">
-        <img src="assets/photos/photo2.jpg" alt="">
-        <p class="caption">Some caption goes here</p>
-       </div>
-       <div class="photo-card">
-        <img src="assets/photos/phot3.jpg" alt="">
-        <p class="caption">Some caption goes here</p>
-       </div>
-    </div>
     <div class="chapter-nav">
-      <button class="next-btn" data-next="ch2">Ch. 2 →</button>
+      <button class="prev-btn button" data-prev="intro">Intro</button>
+      <button id="gallery-btn" class="button">Next</button>
     </div>
   </section>
 
@@ -55,8 +41,8 @@
       <!-- player goes here later -->
     </div>
     <div class="chapter-nav">
-      <button class="prev-btn" data-prev="ch1">← Ch. 1</button>
-      <button class="next-btn" data-next="ch3">Ch. 3 →</button>
+      <button id="ch2-prev-btn" class="prev-btn button" >Prev</button>
+      <button class="next-btn button" data-next="ch3">Next</button>
     </div>
   </section>
 
@@ -68,8 +54,8 @@
       <!-- written content goes here later -->
     </div>
     <div class="chapter-nav">
-      <button class="prev-btn" data-prev="ch2">← Ch. 2</button>
-      <button class="next-btn" data-next="ch4">Ch. 4 →</button>
+      <button class="prev-btn button" data-prev="ch2">← Ch. 2</button>
+      <button class="next-btn button" data-next="ch4">Ch. 4 →</button>
     </div>
   </section>
 
@@ -81,8 +67,8 @@
       <!-- player goes here later -->
     </div>
     <div class="chapter-nav">
-      <button class="prev-btn" data-prev="ch3">← Ch. 3</button>
-      <button class="next-btn" data-next="ch5">Ch. 5 →</button>
+      <button class="prev-btn button" data-prev="ch3">← Ch. 3</button>
+      <button class="next-btn button" data-next="ch5">Ch. 5 →</button>
     </div>
   </section>
 
@@ -94,7 +80,7 @@
       <!-- letter goes here later -->
     </div>
     <div class="chapter-nav">
-      <button class="prev-btn" data-prev="ch4">← Ch. 4</button>
+      <button class="prev-btn button" data-prev="ch4">← Ch. 4</button>
     </div>
   </section>
 

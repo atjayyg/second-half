@@ -60,7 +60,12 @@
                 <p class="caption">Some caption goes here</p>
             </div>
         </div>
-        <a class="link-btn" href="index.html">Next</a>
+
+        <div class="chapter-nav">
+            <button id="gallery-prev-btn" class="button">Prev</button>
+            <button id="gallery-next-btn" class="button">Next</button>
+        </div>
+
     </main>
 
     <!-- Lightbox overlay -->
@@ -94,6 +99,12 @@
             lightbox.classList.remove("active")
         })
 
+        document.addEventListener("keydown", function(event){
+            if (event.key === "Escape"){
+                lightbox.classList.remove("active")
+            }
+        })
+
         myBox.forEach(box => {
             box.addEventListener("click", function () {
                 const clickedText = box.querySelector("p")
@@ -125,6 +136,15 @@
                 }
             })
         })
+
+        document.getElementById("gallery-next-btn").addEventListener("click", function () {
+            window.location.href = "index.html#ch2"
+        })
+
+        document.getElementById("gallery-prev-btn").addEventListener("click", function () {
+            window.location.href = "index.html#ch1"
+        })
+
     </script>
 
 </body>

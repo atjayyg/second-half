@@ -21,3 +21,41 @@ beginBtn.addEventListener("click", function(){
     document.getElementById("ch1").classList.add("active")
 })
 
+document.getElementById("gallery-btn").addEventListener("click", function(){
+    window.location.href = "gallery.html"
+})
+
+document.getElementById("ch2-prev-btn").addEventListener("click", function(){
+    window.location.href = "gallery.html"
+})
+
+
+
+const nextBtn = document.querySelectorAll(".next-btn")
+const prevBtn = document.querySelectorAll(".prev-btn")
+
+nextBtn.forEach(nextBtn => {
+    nextBtn.addEventListener("click", function() {
+        document.querySelector(".screen.active").classList.remove("active")
+        document.getElementById(nextBtn.dataset.next).classList.add("active")
+    })
+});
+
+prevBtn.forEach(prevBtn => {
+    prevBtn.addEventListener("click", function(){
+        document.querySelector(".screen.active").classList.remove("active")
+        document.getElementById(prevBtn.dataset.prev).classList.add("active")
+    })
+})
+
+if (window.location.hash === "#ch2") {
+    document.getElementById("intro").classList.remove("active")
+    document.getElementById("ch2").classList.add("active")
+    history.replaceState(null, "", " ")
+}
+
+if (window.location.hash === "#ch1") {
+    document.querySelector(".screen.active").classList.remove("active")
+    document.getElementById("ch1").classList.add("active")
+    history.replaceState(null, "", " ")
+}
