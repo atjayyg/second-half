@@ -66,22 +66,26 @@
     <!-- Lightbox overlay -->
     <div class="lightbox">
         <img src="" alt="" class="lightbox-img">
-        <p class="lightbox-caption"></p>
+        <p class="lightbox-text"></p>
+        <p class="lightbox-sub"></p>
     </div>
 
     <script>
         const lightbox = document.querySelector(".lightbox");
         const lightboxImg = document.querySelector(".lightbox-img");
-        const lightboxCaption = document.querySelector(".lightbox-caption");
+        const lightboxText = document.querySelector(".lightbox-text");
+        const lightboxSub = document.querySelector(".lightbox-sub");
         const photocards = document.querySelectorAll(".photo-card");
         const myBox = document.querySelectorAll(".myBox")
 
         photocards.forEach(card => {
             card.addEventListener("click", function () {
                 const clickedImage = card.querySelector("img");
-                const clickedCaption = card.querySelector("p");
+                const clickedText = card.querySelector("p");
                 lightboxImg.src = clickedImage.src
-                lightboxCaption.innerHTML = clickedCaption.innerHTML
+                lightboxImg.style.display = "block"
+                lightboxText.style.display = "none"
+                lightboxSub.innerHTML = clickedText.innerHTML
                 lightbox.classList.add("active")
             })
         })
@@ -91,21 +95,32 @@
         })
 
         myBox.forEach(box => {
-            box.addEventListener("click", function(){
+            box.addEventListener("click", function () {
                 const clickedText = box.querySelector("p")
-                if (clickedText.classList.contains("date")){
-                    lightboxCaption.className =""
-                    lightboxCaption.innerHTML = "This is the date or somehting"
+                if (clickedText.classList.contains("date")) {
+                    lightboxImg.style.display = "none"
+                    lightboxText.style.display = "block"
+                    lightboxText.className = "lightbox-date"
+                    lightboxText.innerHTML = "05.06.25"
+                    lightboxSub.innerHTML = "This is the date or something"
                     lightbox.classList.add("active")
                 }
-                if (clickedText.classList.contains("quote")){
-                    lightboxCaption.className =""
-                    lightboxCaption.innerHTML = "This is a quote or something"
+                if (clickedText.classList.contains("quote")) {
+                    lightboxImg.style.display = "none"
+                    lightboxText.style.display = "block"
+                    lightboxText.className = "lightbox-quote"
+
+                    lightboxText.innerHTML = '"some other quote here too"'
+                    lightboxSub.innerHTML = "This quote means somehting"
                     lightbox.classList.add("active")
                 }
-                if (clickedText.classList.contains("lavinia")){
-                    lightboxCaption.className =""
-                    lightboxCaption.innerHTML = "This is her name or something"
+                if (clickedText.classList.contains("lavinia")) {
+                    lightboxImg.style.display = "none"
+                    lightboxText.style.display = "block"
+                    lightboxText.className = "lightbox-lavinia"
+
+                    lightboxText.innerHTML = "Lavinia"
+                    lightboxSub.innerHTML = "Aka: Juliano, PewPew, Lavi, Jayvinia"
                     lightbox.classList.add("active")
                 }
             })
