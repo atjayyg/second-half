@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Second Half</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Intro screen -->
@@ -37,11 +39,52 @@
   <section id="ch2" class="screen">
     <p class="eyebrow">Chapter two</p>
     <h2 class="title">Music break</h2>
+    <div class="chapter-nav">
+      <button id="ch2-prev-btn" class="prev-btn button">Prev</button>
+      <button class="next-btn button" data-next="ch2-main">Next</button>
+    </div>
+  </section>
+
+  <section id="ch2-main" class="screen">
+    <p class="eyebrow">Chapter two</p>
+    <h2 class="title">Music break</h2>
     <div class="music-player">
       <!-- player goes here later -->
+      <div class="song-card active" id="ch2-song1">
+        <iframe data-testid="embed-iframe" style="border-radius:12px"
+          src="https://open.spotify.com/embed/track/3SeDS5sSoWnwAZvVgkdKzf?utm_source=generator" width="100%"
+          height="152" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p class="song-note">song1</p>
+      </div>
+      <div class="song-card" id="ch2-song2">
+        <iframe data-testid="embed-iframe" style="border-radius:12px"
+          src="https://open.spotify.com/embed/track/4PwWESSlTwzvw9B7bmtTLS?utm_source=generator" width="100%"
+          height="152" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p class="song-note">song2e</p>
+      </div>
+      <div class="song-card" id="ch2-song3">
+        <iframe data-testid="embed-iframe" style="border-radius:12px"
+          src="https://open.spotify.com/embed/track/6x0v6SaLC9E4XY39efEeCs?utm_source=generator" width="100%"
+          height="152" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p class="song-note">song3</p>
+      </div>
+      <div class="song-card" id="ch2-song4">
+        <iframe data-testid="embed-iframe" style="border-radius:12px"
+          src="https://open.spotify.com/embed/track/2xlV2CuWgpPyE9e0GquKDN?utm_source=generator" width="100%"
+          height="152" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p class="song-note">song4</p>
+      </div>
+      <div class="song-nav">
+        <button class="button" id="song-prev"><-</button>
+          <button class="button" id="song-next">-></button>
+      </div>
     </div>
     <div class="chapter-nav">
-      <button id="ch2-prev-btn" class="prev-btn button" >Prev</button>
+      <button id="ch2-prev-btn" class="prev-btn button">Prev</button>
       <button class="next-btn button" data-next="ch3">Next</button>
     </div>
   </section>
@@ -85,4 +128,6 @@
   </section>
 
   <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>

@@ -318,6 +318,43 @@ body {
   text-align: center;
 }
 
+.music-player {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.song-card {
+  display: none;
+}
+
+.song-card.active {
+  display: block;
+}
+
+.song-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.song-counter {
+  color: var(--sand);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+}
+
+.song-note {
+  margin-top: 1.5rem;
+  color: var(--cream);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
