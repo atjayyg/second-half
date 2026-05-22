@@ -48,38 +48,68 @@ prevBtn.forEach(prevBtn => {
     })
 })
 
-const songCard = document.querySelectorAll(".song-card")
-let currentSongCard = 1
-document.getElementById("song-next").addEventListener("click", function () {
-    currentSongCard ++
-    currentSongCheck(currentSongCard)
-    document.querySelector(".song-card.active").classList.remove("active")
-    document.getElementById("ch2-song" + String(currentSongCard)).classList.add("active")
+
+let currentSongCardCh2 = 1
+
+document.getElementById("ch2-song-next").addEventListener("click", function () {
+    currentSongCardCh2++
+    currentSongCheckCh2(currentSongCardCh2)
+    document.querySelector("#ch2-main .song-card.active").classList.remove("active")
+    document.getElementById("ch2-song" + currentSongCardCh2).classList.add("active")
 })
 
-document.getElementById("song-prev").addEventListener("click", function() {
-    currentSongCard --
-    currentSongCheck(currentSongCard)
-    document.querySelector(".song-card.active").classList.remove("active")
-    document.getElementById("ch2-song" + String(currentSongCard)).classList.add("active")
+document.getElementById("ch2-song-prev").addEventListener("click", function () {
+    currentSongCardCh2--
+    currentSongCheckCh2(currentSongCardCh2)
+    document.querySelector("#ch2-main .song-card.active").classList.remove("active")
+    document.getElementById("ch2-song" + currentSongCardCh2).classList.add("active")
 })
 
-function currentSongCheck(currentSongCard) {
-    if (currentSongCard == 4) {
-        document.getElementById("song-next").style.visibility = "hidden"
+function currentSongCheckCh2(currentSongCardCh2) {
+    if (currentSongCardCh2 == 4) {
+        document.getElementById("ch2-song-next").style.visibility = "hidden"
+    } else {
+        document.getElementById("ch2-song-next").style.visibility = "visible"
     }
-    else {
-        document.getElementById("song-next").style.visibility = "visible"
-    }
-
-    if (currentSongCard == 1) {
-        document.getElementById("song-prev").style.visibility = "hidden"
-    }
-    else {
-        document.getElementById("song-prev").style.visibility = "visible"
-
+    if (currentSongCardCh2 == 1) {
+        document.getElementById("ch2-song-prev").style.visibility = "hidden"
+    } else {
+        document.getElementById("ch2-song-prev").style.visibility = "visible"
     }
 }
+
+
+
+
+let currentSongCardCh4 = 1
+
+document.getElementById("ch4-song-next").addEventListener("click", function () {
+    currentSongCardCh4++
+    currentSongCheckCh4(currentSongCardCh4)
+    document.querySelector("#ch4 .song-card.active").classList.remove("active")
+    document.getElementById("ch4-song" + currentSongCardCh4).classList.add("active")
+})
+
+document.getElementById("ch4-song-prev").addEventListener("click", function () {
+    currentSongCardCh4--
+    currentSongCheckCh4(currentSongCardCh4)
+    document.querySelector("#ch4 .song-card.active").classList.remove("active")
+    document.getElementById("ch4-song" + currentSongCardCh4).classList.add("active")
+})
+
+function currentSongCheckCh4(currentSongCardCh4) {
+    if (currentSongCardCh4 == 4) {
+        document.getElementById("ch4-song-next").style.visibility = "hidden"
+    } else {
+        document.getElementById("ch4-song-next").style.visibility = "visible"
+    }
+    if (currentSongCardCh4 == 1) {
+        document.getElementById("ch4-song-prev").style.visibility = "hidden"
+    } else {
+        document.getElementById("ch4-song-prev").style.visibility = "visible"
+    }
+}
+
 
 
 if (window.location.hash === "#ch2") {
@@ -94,4 +124,5 @@ if (window.location.hash === "#ch1") {
     history.replaceState(null, "", " ")
 }
 
-currentSongCheck(currentSongCard)
+currentSongCheckCh2(currentSongCardCh2)
+currentSongCheckCh4(currentSongCardCh4)
