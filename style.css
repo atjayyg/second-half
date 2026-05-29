@@ -354,6 +354,46 @@ body {
   line-height: 1.7;
 }
 
+.reflections {
+  overflow-y: auto;
+  max-height: 70vh;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 20px;
+}
+
+.reflection-block h3 {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 1.5rem;
+}
+
+.reflection-block ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.reflection-block ul li {
+  font-size: 1.1rem;
+  color: var(--cream);
+  line-height: 1.7;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--sand);
+}
+
+.reflection-block ul {
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+}
 
 @keyframes fadeIn {
   from {
