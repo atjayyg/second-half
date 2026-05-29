@@ -110,7 +110,14 @@ function currentSongCheckCh4(currentSongCardCh4) {
     }
 }
 
+const revealBtn = document.getElementById('ch4-reveal-btn');
+const revealNote = document.getElementById('ch4-reveal-note');
 
+revealBtn.addEventListener('click', () => {
+  revealNote.classList.add('visible');
+  revealBtn.style.opacity = '0';
+  revealBtn.style.pointerEvents = 'none';
+});
 
 if (window.location.hash === "#ch2") {
     document.getElementById("intro").classList.remove("active")
