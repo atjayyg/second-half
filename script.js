@@ -19,6 +19,7 @@ const beginBtn = document.getElementById("begin-btn")
 beginBtn.addEventListener("click", function () {
     document.getElementById("intro").classList.remove("active")
     document.getElementById("ch1").classList.add("active")
+    updateDots("ch1")
 })
 
 document.getElementById("gallery-btn").addEventListener("click", function () {
@@ -38,6 +39,7 @@ nextBtn.forEach(nextBtn => {
     nextBtn.addEventListener("click", function () {
         document.querySelector(".screen.active").classList.remove("active")
         document.getElementById(nextBtn.dataset.next).classList.add("active")
+        updateDots(nextBtn.dataset.next)
     })
 });
 
@@ -45,6 +47,7 @@ prevBtn.forEach(prevBtn => {
     prevBtn.addEventListener("click", function () {
         document.querySelector(".screen.active").classList.remove("active")
         document.getElementById(prevBtn.dataset.prev).classList.add("active")
+        updateDots(nextBtn.dataset.prev)
     })
 })
 
@@ -98,7 +101,7 @@ document.getElementById("ch4-song-prev").addEventListener("click", function () {
 })
 
 function currentSongCheckCh4(currentSongCardCh4) {
-    if (currentSongCardCh4 == 4) {
+    if (currentSongCardCh4 == 5) {
         document.getElementById("ch4-song-next").style.visibility = "hidden"
     } else {
         document.getElementById("ch4-song-next").style.visibility = "visible"
@@ -119,6 +122,20 @@ revealBtn.addEventListener('click', () => {
   revealBtn.style.pointerEvents = 'none';
 });
 
+function updateDots(chapterId) {
+  const dotMap = {
+    "ch2-main": "ch2"
+  }
+  const mappedId = dotMap[chapterId] || chapterId;
+  
+  document.querySelectorAll('.dot').forEach(dot => {
+    dot.classList.remove('active');
+    if (dot.dataset.chapter === mappedId) {
+      dot.classList.add('active');
+    }
+  });
+}
+
 if (window.location.hash === "#ch2") {
     document.getElementById("intro").classList.remove("active")
     document.getElementById("ch2").classList.add("active")
@@ -131,5 +148,6 @@ if (window.location.hash === "#ch1") {
     history.replaceState(null, "", " ")
 }
 
+updateDots("intro")
 currentSongCheckCh2(currentSongCardCh2)
 currentSongCheckCh4(currentSongCardCh4)

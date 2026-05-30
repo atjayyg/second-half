@@ -360,6 +360,12 @@ body {
   line-height: 1.7;
 }
 
+.bonus-song{
+  color: var(--cream);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
 .reflections {
   overflow-y: auto;
   max-height: 70vh;
@@ -423,6 +429,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+  margin-bottom: 20px;
 }
 
 .letter p {
@@ -459,6 +466,28 @@ body {
 
 .reflections::-webkit-scrollbar {
   display: none;
+}
+
+.nav-dots {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 100;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mid);
+  transition: background 0.4s ease;
+}
+
+.dot.active {
+  background: var(--sand);
 }
 
 @keyframes fadeIn {
