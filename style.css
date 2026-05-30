@@ -501,3 +501,30 @@ body {
     transform: translateY(0px);
   }
 }
+
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "A A"
+      "B B"
+      "C C"
+      "S1 S1"
+      "D D"
+      "S2 S2"
+      "E E"
+      "F F"
+      "S3 S3"
+      "G G"
+      "H H";
+  }
+
+  .lavinia {
+    font-size: 3rem;
+  }
+
+  .lightbox-lavinia {
+    font-size: 3rem;
+  }
+}

@@ -101,7 +101,7 @@ document.getElementById("ch4-song-prev").addEventListener("click", function () {
 })
 
 function currentSongCheckCh4(currentSongCardCh4) {
-    if (currentSongCardCh4 == 5) {
+    if (currentSongCardCh4 == 6) {
         document.getElementById("ch4-song-next").style.visibility = "hidden"
     } else {
         document.getElementById("ch4-song-next").style.visibility = "visible"
